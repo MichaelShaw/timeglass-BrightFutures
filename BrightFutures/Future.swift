@@ -97,7 +97,7 @@ public func materialize<E: Error>(_ scope: ((E?) -> Void) -> Void) -> Future<Voi
             if let err = err {
                 complete(.failure(err))
             } else {
-                complete(.success())
+                complete(.success(()))
             }
         }
     }
